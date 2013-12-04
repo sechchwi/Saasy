@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
   def self.all_ratings
-    %w(G PG PG-13 NC-17 R)
+    ["Christ the Center", "Proclaim Christ", "Being Christ's Disciple", "Grow in Christlikeness"]
   end
 end

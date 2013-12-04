@@ -1,35 +1,33 @@
-Feature: display list of movies filtered by MPAA rating
- 
-  As a concerned parent
-  So that I can quickly browse movies appropriate for my family
-  I want to see movies matching only certain MPAA ratings
+Feature: display list of verses sorted by category
+As an user
+So that I can view only a specific range of Bible verses
+I want to be able to sort Bible verses by Category
 
 Background: movies have been added to database
+Given the following movies exist:
+| title | rating | release_date|
+| 2 Corinthians 5:17  | Christ the Center| Therefore, if anyone is in Christ, he has become a new creaton. The old has passed away; behold, the new has come. |
+| Romans 3:23 | Proclaim Christ | for all have sinned and fallen short of the glory of God |
+|Matthew 6:33 | Being Christ's Disciple | But seek first the kingdom of God and his righteousness, and all these things will be added to you. |
+| John 13: 34-35  | Grow in Christlikeness| A new commandment I give you, that you love one another: just as I hve loved you, you are to love one another. By this, all people will know you are my disciples, if you have love for one another. |
 
-  Given the following movies exist:
-  | title                   | rating | release_date |
-  | Aladdin                 | G      | 25-Nov-1992  |
-  | The Terminator          | R      | 26-Oct-1984  |
-  | When Harry Met Sally    | R      | 21-Jul-1989  |
-  | The Help                | PG-13  | 10-Aug-2011  |
-  | Chocolat                | PG-13  | 5-Jan-2001   |
-  | Amelie                  | R      | 25-Apr-2001  |
-  | 2001: A Space Odyssey   | G      | 6-Apr-1968   |
-  | The Incredibles         | PG     | 5-Nov-2004   |
-  | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
-  | Chicken Run             | G      | 21-Jun-2000  |
+And I am on the RottenPotatoes home page
+Scenario: restrict to verses with 'Christ the Center' or 'Proclaim Christ' ratings
+# enter step(s) to check the 'Christ the Center' and 'Proclaim Christ' checkboxes
+# enter step(s) to uncheck all other checkboxes
+# enter step to "submit" the search form on the homepage
+# enter step(s) to ensure that Christ the Center and Proclaim Christ verses are visible
+# enter step(s) to ensure that other verses are not visible
+When I uncheck the following ratings: Being Christ's Disciple, Grow in Christlikeness
+And I check the following ratings: Christ the Center, Proclaim Christ
+And I press "Refresh"
+Then I should see "2 Corinthians 5:17"
+And I should see "Romans 3:23"
+But I should not see "Matthew 6:33"
+And I should not see "John 13: 34-35"
 
-  And  I am on the RottenPotatoes home page
-  
-Scenario: restrict to movies with 'PG' or 'R' ratings
-  # enter step(s) to check the 'PG' and 'R' checkboxes
-  # enter step(s) to uncheck all other checkboxes
-  # enter step to "submit" the search form on the homepage
-  # enter step(s) to ensure that PG and R movies are visible
-  # enter step(s) to ensure that other movies are not visible
-
-Scenario: no ratings selected
-  # see assignment
 
 Scenario: all ratings selected
-  # see assignment
+# see assignment
+When I check the following ratings: Christ the Center, Proclaim Christ, Being Christ's Disciple, Grow in Christlikeness
+Then I should see all of the movies
