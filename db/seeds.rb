@@ -6,16 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
-    	  {:title => 'The Terminator', :rating => 'R', :release_date => '26-Oct-1984'},
-    	  {:title => 'When Harry Met Sally', :rating => 'R', :release_date => '21-Jul-1989'},
-      	  {:title => 'The Help', :rating => 'PG-13', :release_date => '10-Aug-2011'},
-      	  {:title => 'Chocolat', :rating => 'PG-13', :release_date => '5-Jan-2001'},
-      	  {:title => 'Amelie', :rating => 'R', :release_date => '25-Apr-2001'},
-      	  {:title => '2001: A Space Odyssey', :rating => 'G', :release_date => '6-Apr-1968'},
-      	  {:title => 'The Incredibles', :rating => 'PG', :release_date => '5-Nov-2004'},
-      	  {:title => 'Raiders of the Lost Ark', :rating => 'PG', :release_date => '12-Jun-1981'},
-      	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
+movies = [{:title => '2 Corinthians 5:17', :rating => 'Christ the Center', :release_date => 'Therefore, if anyone is in Christ, he has become a new creaton. The old has passed away; behold, the new has come.'},
+    	  {:title => 'Romans 3:23', :rating => 'Proclaim Christ', :release_date => 'for all have sinned and fallen short of the glory of God'},
+    	  {:title => 'Matthew 6:33', :rating => "Being Christ's Disciple", :release_date => 'But seek first the kingdom of God and his righteousness, and all these things will be added to you.'},
+      	  {:title => 'John 13: 34-35', :rating => 'Grow in Christlikeness', :release_date => 'A new commandment I give you, that you love one another: just as I hve loved you, you are to love one another. By this, all people will know you are my disciples, if you have love for one another.'},
   	 ]
 
 movies.each do |movie|
