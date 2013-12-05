@@ -3,8 +3,8 @@ As an user
 So that I can view only a specific range of Bible verses
 I want to be able to sort Bible verses by Category
 
-Background: movies have been added to database
-Given the following movies exist:
+Background: verses have been added to database
+Given the following verses exist:
 | title | rating | release_date|
 | 2 Corinthians 5:17  | Christ the Center| Therefore, if anyone is in Christ, he has become a new creaton. The old has passed away; behold, the new has come. |
 | Romans 3:23 | Proclaim Christ | for all have sinned and fallen short of the glory of God |
@@ -30,4 +30,4 @@ And I should not see "John 13: 34-35"
 Scenario: all ratings selected
 # see assignment
 When I check the following ratings: Christ the Center, Proclaim Christ, Being Christ's Disciple, Grow in Christlikeness
-Then I should see all of the movies
+Then I should see all verses

@@ -1,6 +1,6 @@
 # Add a declarative step here for populating the DB with movies.
 
-Given /the following movies exist/ do |movies_table|
+Given /the following verses exist/ do |movies_table|
   movies_table.hashes.each do |movie|
      Movie.create(movie)
   end
@@ -15,12 +15,12 @@ Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
    assert(page.body.index(e1) < page.body.index(e2))
 end
 
-Then  /I should see all movies/ do
+Then  /I should see all verses/ do
   rows = page.body.scan(/<tr>/).length - 1
   assert(rows == Movie.all.length)
 end
 
-Then /I should not see any movies/ do
+Then /I should not see any verses/ do
   #assert page.has_no_content?()
 end
 # Make it easier to express checking or unchecking several boxes at once
